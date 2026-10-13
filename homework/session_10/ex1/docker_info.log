@@ -1,0 +1,17 @@
+$ docker info
+Server:
+ Server Version: 29.7.2
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 1
+ Storage Driver: overlay2
+ Kernel Version: 6.18.33.2-microsoft-standard-WSL2
+ Operating System: Docker Desktop
+
+$ docker info | grep -i cgroup
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2

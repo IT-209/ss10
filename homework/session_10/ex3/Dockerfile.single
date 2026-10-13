@@ -1,0 +1,19 @@
+# ==========================================
+# Single-stage Dockerfile (Mẫu dùng để so sánh)
+# ==========================================
+FROM node:18-alpine
+
+WORKDIR /app
+
+ENV PORT=3000
+
+EXPOSE 3000
+
+# Copy file package và cài đặt toàn bộ dependencies
+COPY package*.json ./
+RUN npm install
+
+# Copy toàn bộ mã nguồn
+COPY . .
+
+CMD ["node", "server.js"]
